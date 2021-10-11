@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="end"
+        android:layout_margin="8dp">
+
+        <ProgressBar
+            android:id="@+id/BottomSheetLayout_ProgressBar_ThereIsJourney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:indeterminate="true"
+            android:layout_gravity="end"/>
+
+        <TextView
+            android:id="@+id/BottomSheetLayout_TextView_Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="2020/11/22"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/abel"
+            android:layout_gravity="end"/>
+
+        <ImageView
+            android:id="@+id/BottomSheetLayout_ImageView_Note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_event_note_24"
+            android:layout_gravity="center_vertical"/>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/BottomSheetLayout_ImageView_Edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_baseline_edit_location_24"/>
+
+            <ImageView
+                android:id="@+id/BottomSheetLayout_ImageView_Done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_baseline_done_24_3"
+                android:visibility="gone"/>
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/BottomSheetLayout_ImageView_Add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_add_24"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="85dp" />
+
+
+
+
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="40dp"
+            android:src="@drawable/from_to"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/BottomSheetLayout_EditText_From"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:fontFamily="@font/abel"
+            android:gravity="center"
+            tools:text="Assuit"
+            android:enabled="false"
+            android:backgroundTint="@android:color/transparent"
+            android:textColor="@android:color/black"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.05" />
+
+        <TextView
+            android:id="@+id/BottomSheetLayout_TextView_To"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:gravity="center"
+            tools:text="Al-Badary City, Al-Ahly Bank"
+            android:textColor="@android:color/black"
+            android:layout_marginEnd="5dp"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.05"
+            />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/BottomSheetLayout_ConstraintLayout_EditTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0">
+
+                <EditText
+                    android:id="@+id/BottomSheetLayout_EditText_City"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp"
+                    android:fontFamily="@font/abel"
+                    tools:text="Al-Badary"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/BottomSheetLayout_EditText_BankName"
+                    app:layout_constraintStart_toEndOf="@id/BottomSheetLayout_EditText_Address"/>
+
+                <EditText
+                    android:id="@+id/BottomSheetLayout_EditText_Address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp"
+                    android:fontFamily="@font/abel"
+                    tools:text="Al-Mahatta"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/BottomSheetLayout_EditText_BankName"
+                    app:layout_constraintEnd_toStartOf="@id/BottomSheetLayout_EditText_City"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <EditText
+                    android:id="@+id/BottomSheetLayout_EditText_BankName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp"
+                    android:fontFamily="@font/abel"
+                    tools:text="Al-ahly"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/BottomSheetLayout_EditText_City"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/BottomSheetLayout_Button_AddTransportation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/primaryDarkColor"
+        android:textColor="@android:color/white"
+        android:text="Add transportation"
+        android:textAllCaps="false"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/BottomSheetLayout_RecyclerView_AllTransportation"
+        android:clipToPadding="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <Button
+            android:id="@+id/BottomSheetLayout_Button_End"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primaryDarkColor"
+            android:textColor="@android:color/white"
+            android:text="End"
+            android:textAllCaps="false"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/BottomSheetLayout_Button_Cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primaryDarkColor"
+            android:textColor="@android:color/white"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:layout_weight="1" />
+        <Button
+            android:id="@+id/BottomSheetLayout_Button_Return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primaryDarkColor"
+            android:textColor="@android:color/white"
+            android:text="Return"
+            android:textAllCaps="false"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+</LinearLayout>

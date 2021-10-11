@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/ShowTransportation_ImageView_Image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:src="@drawable/ic_boat"
+            android:layout_margin="8dp"/>
+
+        <TextView
+            android:id="@+id/ShowTransportation_TextView_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text = "Boat"
+            android:layout_margin="8dp"
+            android:textSize="18sp"
+            android:fontFamily="@font/abel"
+            android:textColor="@android:color/black"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/ShowTransportation_TextView_Cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        tools:text="20 EGP"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/abel"/>
+
+</LinearLayout>

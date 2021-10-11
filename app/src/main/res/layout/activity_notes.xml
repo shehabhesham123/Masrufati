@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/NoteActivity_CardView_Monitor"
+            android:layout_width="180dp"
+            android:layout_height="100dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="7dp"
+            app:cardElevation="7dp"
+            app:cardUseCompatPadding="true"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:foreground="?attr/selectableItemBackground"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/NoteActivity_CardView_CardReader"
+            app:layout_constraintBottom_toTopOf="@+id/NoteActivity_CardView_ReceiptPrinter">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Monitor-Touch"
+                    android:textSize="22sp"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/abel"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/NoteActivity_CardView_CardReader"
+            android:layout_width="180dp"
+            android:layout_height="100dp"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="7dp"
+            app:cardElevation="7dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintStart_toEndOf="@id/NoteActivity_CardView_Monitor"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/NoteActivity_CardView_Dispenser"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Card reader"
+                    android:textSize="22sp"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/abel"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/NoteActivity_CardView_ReceiptPrinter"
+            android:layout_width="180dp"
+            android:layout_height="100dp"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="7dp"
+            app:cardElevation="7dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintTop_toBottomOf="@+id/NoteActivity_CardView_Monitor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/NoteActivity_CardView_Dispenser"
+            app:layout_constraintBottom_toTopOf="@+id/NoteActivity_CardView_Gpru">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Receipt printer"
+                    android:textSize="22sp"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/abel"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/NoteActivity_CardView_Dispenser"
+            android:layout_width="180dp"
+            android:layout_height="100dp"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="7dp"
+            app:cardElevation="7dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintStart_toEndOf="@id/NoteActivity_CardView_ReceiptPrinter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/NoteActivity_CardView_Gpru"
+            app:layout_constraintTop_toBottomOf="@id/NoteActivity_CardView_CardReader">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dispenser"
+                    android:textSize="22sp"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/abel"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/NoteActivity_CardView_Gpru"
+            android:layout_width="180dp"
+            android:layout_height="100dp"
+            android:clickable="true"
+            android:onClick="onClick"
+
+            android:foreground="?attr/selectableItemBackground"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="7dp"
+            app:cardElevation="7dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/NoteActivity_CardView_Dispenser">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:gravity="center">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GBRU - GBNA"
+                    android:textSize="22sp"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/abel"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+<FrameLayout
+    android:id="@+id/fragmentContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
